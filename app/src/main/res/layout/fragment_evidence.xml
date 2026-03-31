@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main"
+    android:padding="24dp"
+    android:paddingTop="40dp"
+    android:paddingBottom="0dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evidence Locker"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tamper-proof blockchain-hashed records"
+        android:textSize="13sp"
+        android:textColor="@color/text_muted"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Storage info banner -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/bg_elevated"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                android:src="@drawable/ic_shield"
+                android:contentDescription="Decentralized Storage"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Decentralized IPFS Storage"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="No single point of control or deletion"
+                    android:textSize="12sp" android:textColor="@color/text_muted" />
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Secured"
+                android:textSize="11sp" android:textStyle="bold"
+                android:textColor="@color/accent_green"
+                android:paddingHorizontal="10dp" android:paddingVertical="5dp"
+                android:background="@drawable/bg_badge_success" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerEvidence"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        android:scrollbars="none" />
+
+</LinearLayout>

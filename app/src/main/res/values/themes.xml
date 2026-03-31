@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base App Theme: Light -->
+    <style name="Theme.SafeChain" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent_amber</item>
+        <item name="android:windowBackground">@color/bg_main</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/bg_bottom_nav</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Splash Theme -->
+    <style name="Theme.SafeChain.Splash" parent="Theme.SafeChain">
+        <item name="android:windowBackground">@color/primary</item>
+        <item name="android:statusBarColor">@color/primary</item>
+    </style>
+
+    <!-- Stealth Notes Theme -->
+    <style name="Theme.StealthNotes" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowBackground">@color/stealth_bg</item>
+        <item name="android:statusBarColor">@color/stealth_bg</item>
+        <item name="android:navigationBarColor">@color/stealth_bg</item>
+        <item name="android:textColorPrimary">@color/stealth_text</item>
+    </style>
+
+    <!-- Card styles -->
+    <style name="SafeCard">
+        <item name="android:background">@drawable/bg_white_card</item>
+    </style>
+
+    <!-- Blue header section -->
+    <style name="BlueHeader">
+        <item name="android:background">@drawable/bg_blue_gradient</item>
+        <item name="android:padding">24dp</item>
+        <item name="android:paddingTop">44dp</item>
+        <item name="android:paddingBottom">28dp</item>
+    </style>
+
+    <!-- Watch Duty Alert badge style -->
+    <style name="AlertBadge">
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!-- Stat tile label -->
+    <style name="StatLabel">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textColor">@color/text_muted</item>
+    </style>
+
+    <!-- Stat tile value -->
+    <style name="StatValue">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+</resources>

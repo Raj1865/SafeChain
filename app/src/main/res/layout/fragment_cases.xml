@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cases: Clean white list with banking-app style header + Watch Duty case cards -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main">
+
+    <!-- Blue header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_blue_gradient"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="44dp"
+        android:paddingBottom="20dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="My Cases"
+            android:textSize="22sp" android:textStyle="bold"
+            android:textColor="@color/text_on_blue" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="On-chain complaint tracking · Audit trail"
+            android:textSize="12sp" android:textColor="#BBDEFB" />
+    </LinearLayout>
+
+    <!-- How It Works info card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardHowItWorks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardBackgroundColor="#EDE7F6"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="1dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="14dp" android:background="#18196D">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🔗 Who Receives Your Cases?"
+                android:textSize="14sp" android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="6dp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Your evidence is encrypted and pinned to IPFS (decentralized storage). A hash is permanently written to the Polygon blockchain via smart contract. No single entity controls or can tamper with the data.\n\n• Export reports directly to Law Enforcement via the Share button.\n• Auto-escalation: If not reviewed in 48h, the smart contract escalates automatically.\n• Tap this card to open the Evidence Locker and view your captured images."
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="3dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCases"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        android:scrollbars="none" />
+
+</LinearLayout>
+

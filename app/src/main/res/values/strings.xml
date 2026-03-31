@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SafeChain</string>
+    <string name="stealth_name">DailyNotes</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_report">Report</string>
+    <string name="nav_map">Map</string>
+    <string name="nav_cases">Cases</string>
+    <string name="nav_evidence">Evidence</string>
+
+    <!-- Home -->
+    <string name="tagline">Anonymous · Immutable · Verified</string>
+    <string name="sos_label">SOS</string>
+    <string name="sos_instruction">Hold for 3s to trigger Offline BLE Mesh</string>
+    <string name="safety_score_title">Current Safety Score</string>
+
+    <!-- Report -->
+    <string name="report_title">File Report</string>
+    <string name="step_evidence">Secure Evidence</string>
+    <string name="step_details">Incident Details</string>
+    <string name="step_shield">Identity Shield</string>
+    <string name="step_submit">Submit</string>
+    <string name="capture_photo">Tap to Capture Photo</string>
+    <string name="evidence_sealed">Evidence LSB-Sealed</string>
+    <string name="zk_ready">ZK Proof Ready</string>
+    <string name="filing_complaint">Sealing evidence on-chain…</string>
+    <string name="report_sealed">Report Sealed ✓</string>
+    <string name="escalation_warning">If no response in 48hrs, auto-escalation triggers via Smart Contract</string>
+
+    <!-- Categories -->
+    <string name="cat_harassment">Harassment</string>
+    <string name="cat_assault">Assault</string>
+    <string name="cat_stalking">Stalking</string>
+    <string name="cat_suspicious">Suspicious Activity</string>
+    <string name="cat_other">Other</string>
+
+    <!-- Map -->
+    <string name="map_title">Predictive Safety Map</string>
+    <string name="map_live">Live Monitoring</string>
+
+    <!-- Tracking -->
+    <string name="cases_title">My Cases</string>
+    <string name="cases_subtitle">On-chain Complaint Tracking</string>
+
+    <!-- Evidence Locker -->
+    <string name="evidence_title">Evidence Locker</string>
+    <string name="evidence_subtitle">Tamper-proof blockchain-hashed records</string>
+
+    <!-- Stealth -->
+    <string name="stealth_hint">Tap the title 3 times to enter SafeChain</string>
+
+    <!-- Community -->
+    <string name="community_report">Flag Safety Concern</string>
+    <string name="community_hint">Your report is anonymous and feeds into the live heatmap</string>
+
+    <!-- Offline -->
+    <string name="offline_banner">Offline Mode — Reports will sync when connected</string>
+    <string name="online_banner">Connected — All reports synced</string>
+</resources>

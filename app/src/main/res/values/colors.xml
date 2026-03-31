@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Orange (BMA Tracker inspired) -->
+    <color name="primary">#FF7A00</color>
+    <color name="primary_dark">#E65100</color>
+    <color name="primary_light">#7A4005</color>
+    <color name="primary_medium">#FFA726</color>
+
+    <!-- Backgrounds Dark Theme -->
+    <color name="bg_main">#0B0D14</color>
+    <color name="bg_elevated">#151824</color>
+    <color name="bg_header_start">#0B0D14</color>
+    <color name="bg_header_end">#0B0D14</color>
+    <color name="bg_card">#1A1D2D</color>
+
+    <!-- Watch Duty Amber / Alert -->
+    <color name="accent_amber">#FFB300</color>
+    <color name="accent_amber_light">#FFF8E1</color>
+    <color name="secondary">#F44336</color>
+    <color name="secondary_light">#FFEBEE</color>
+
+    <!-- Status Colors -->
+    <color name="accent_green">#00C853</color>
+    <color name="accent_green_light">#E8F5E9</color>
+    <color name="accent_cyan">#0097A7</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#8892B0</color>
+    <color name="text_muted">#505A7A</color>
+    <color name="text_on_blue">#FFFFFF</color>
+    <color name="text_blue">#FF7A00</color>
+
+    <!-- UI Chrome -->
+    <color name="border_light">#2D3248</color>
+    <color name="bg_bottom_nav">#0F121B</color>
+    <color name="bottom_nav_selected">#FF7A00</color>
+    <color name="bottom_nav_unselected">#505A7A</color>
+    <color name="divider">#1F2436</color>
+    <color name="shadow_color">#66000000</color>
+
+    <!-- Status badge colors -->
+    <color name="status_submitted">#1A73E8</color>
+    <color name="status_reviewed">#FFB300</color>
+    <color name="status_escalated">#F44336</color>
+    <color name="status_resolved">#00C853</color>
+
+    <!-- Stealth mode (keep as before) -->
+    <color name="stealth_bg">#FAFAFA</color>
+    <color name="stealth_card">#F5F5F5</color>
+    <color name="stealth_text">#212121</color>
+    <color name="stealth_accent">#757575</color>
+
+    <!-- Chart bars -->
+    <color name="chart_bar">#1A1D2D</color>
+    <color name="chart_bar_active">#FF7A00</color>
+    <color name="chart_bar_danger">#E65100</color>
+</resources>

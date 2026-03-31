@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Alert item: Watch Duty incident card style -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/bg_elevated">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <!-- Title row: dot + name + badge -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+
+            <View android:id="@+id/viewSeverityDot"
+                android:layout_width="10dp" android:layout_height="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/secondary" />
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/tvAlertTitle"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="High-Risk Night Window"
+                    android:textSize="15sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+                <TextView android:id="@+id/tvAlertTime"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="2 mins ago"
+                    android:textSize="11sp" android:textColor="@color/text_muted" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="end">
+                <TextView android:id="@+id/tvAlertSeverity"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="HIGH"
+                    android:textSize="10sp" android:textStyle="bold"
+                    android:paddingHorizontal="8dp" android:paddingVertical="3dp"
+                    android:background="@drawable/bg_badge_danger"
+                    android:textColor="@color/secondary"
+                    android:layout_marginBottom="4dp" />
+                <TextView android:id="@+id/tvAlertType"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="PREDICTIVE"
+                    android:textSize="9sp" android:textColor="@color/text_muted"
+                    android:gravity="end" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/divider" android:layout_marginVertical="8dp" />
+
+        <TextView android:id="@+id/tvAlertMessage"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Historical data shows a 3x spike in incidents around 22:00."
+            android:textSize="13sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Source + View map -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:id="@+id/tvAlertSource"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⚡ ML Pattern Analysis"
+                android:textSize="11sp" android:textColor="@color/primary" />
+            <Button android:id="@+id/btnAlertViewMap"
+                android:layout_width="wrap_content" android:layout_height="32dp"
+                android:text="View Map →"
+                android:textAllCaps="false" android:textSize="11sp"
+                android:textColor="@color/text_on_blue" android:textStyle="bold"
+                android:background="@drawable/bg_button_primary"
+                android:paddingHorizontal="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

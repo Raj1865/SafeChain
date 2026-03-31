@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Step 4: Success Confirmation -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:paddingTop="60dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_shield"
+            android:contentDescription="Success"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report Sealed ✓"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent_green"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your complaint is filed anonymously. The authority has 48 hours to respond before auto-escalation."
+            android:textSize="15sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Proof Block -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            app:cardBackgroundColor="@color/bg_elevated"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="IPFS Evidence CID:" android:textSize="12sp" android:textStyle="bold"
+                    android:textColor="@color/text_muted" android:layout_marginBottom="4dp" />
+
+                <TextView android:id="@+id/tvIpfsCid"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="QmXyz8F3kP..." android:textSize="13sp"
+                    android:textColor="@color/accent_cyan" android:fontFamily="monospace"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Polygon TX Hash:" android:textSize="12sp" android:textStyle="bold"
+                    android:textColor="@color/text_muted" android:layout_marginBottom="4dp" />
+
+                <TextView android:id="@+id/tvTxHash"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="0xabc123..." android:textSize="13sp"
+                    android:textColor="@color/accent_cyan" android:fontFamily="monospace"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="#1AFF3366" android:padding="12dp"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                        android:src="@android:drawable/ic_dialog_alert"
+                        android:tint="@color/secondary" android:contentDescription="Warning"
+                        android:layout_marginEnd="10dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Auto-escalates in 48hrs if no authority response"
+                        android:textSize="12sp" android:textColor="@color/secondary" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button android:id="@+id/btnGoToCases"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="Track Report Status"
+            android:textAllCaps="false" android:textColor="@color/text_primary"
+            android:textSize="16sp" android:textStyle="bold"
+            android:background="@drawable/bg_button_primary"
+            android:layout_marginBottom="12dp" />
+
+        <Button android:id="@+id/btnNewReport"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="File Another Report"
+            android:textAllCaps="false" android:textColor="@color/text_primary"
+            android:background="@drawable/bg_glass_card" />
+    </LinearLayout>
+</ScrollView>

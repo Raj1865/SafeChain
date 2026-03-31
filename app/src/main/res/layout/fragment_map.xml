@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Watch Duty map style: full-screen map with amber top bar + floating bottom incident card -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Full-screen OSMDroid Map -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Watch Duty amber top bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/accent_amber"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SAFECHAIN"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:textColor="@color/text_primary" />
+
+        <ImageView android:layout_width="36dp" android:layout_height="36dp"
+            android:src="@android:drawable/ic_menu_camera"
+            android:tint="@color/text_primary"
+            android:contentDescription="Screenshot"
+            android:padding="6dp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Right overlay controls (Watch Duty LAYERS / NEAR ME / LEGEND) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnLayers"
+            android:layout_width="72dp" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/bg_elevated"
+            app:cardCornerRadius="8dp" app:cardElevation="4dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                    android:src="@android:drawable/ic_menu_mapmode"
+                    android:tint="@color/text_primary"
+                    android:contentDescription="Layers" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="LAYERS" android:textSize="9sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnNearMe"
+            android:layout_width="72dp" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/bg_elevated"
+            app:cardCornerRadius="8dp" app:cardElevation="4dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                    android:src="@android:drawable/ic_menu_mylocation"
+                    android:tint="@color/primary"
+                    android:contentDescription="Near me" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="NEAR ME" android:textSize="9sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnLegend"
+            android:layout_width="72dp" android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_elevated"
+            app:cardCornerRadius="8dp" app:cardElevation="4dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                    android:src="@android:drawable/ic_dialog_info"
+                    android:tint="@color/text_secondary"
+                    android:contentDescription="Legend" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="LEGEND" android:textSize="9sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- Watch Duty style BOTTOM INCIDENT CARD -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_marginBottom="72dp">
+
+        <!-- Draggable indicator -->
+        <View android:layout_width="40dp" android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:background="@color/text_muted" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            app:cardBackgroundColor="@color/bg_elevated"
+            app:cardCornerRadius="16dp" app:cardElevation="8dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+
+                <!-- Top: Area name + close button (like Watch Duty "Mosquito Fire") -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="4dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:id="@+id/tvIncidentCount"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Safety Zone · Current Area"
+                            android:textSize="17sp" android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+                        <TextView android:id="@+id/tvAreaSubtitle"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Detecting location…"
+                            android:textSize="12sp" android:textColor="@color/text_muted" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_close_clear_cancel"
+                        android:tint="@color/text_muted" android:contentDescription="Close" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginVertical="12dp" />
+
+                <!-- Watch Duty ACRES/CONTAINMENT/STATUS style tiles -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="14dp">
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="RISK SCORE" android:textSize="9sp" android:textAllCaps="true"
+                            android:textColor="@color/text_muted" android:letterSpacing="0.08" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="82/100" android:textSize="16sp" android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="INCIDENTS" android:textSize="9sp" android:textAllCaps="true"
+                            android:textColor="@color/text_muted" android:letterSpacing="0.08" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="3 active" android:textSize="16sp" android:textStyle="bold"
+                            android:textColor="@color/secondary" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="STATUS" android:textSize="9sp" android:textAllCaps="true"
+                            android:textColor="@color/text_muted" android:letterSpacing="0.08" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Moderate" android:textSize="16sp" android:textStyle="bold"
+                            android:textColor="@color/accent_amber" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Action buttons -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button android:id="@+id/btnStartNav"
+                        android:layout_width="0dp" android:layout_height="44dp"
+                        android:layout_weight="1" android:layout_marginEnd="8dp"
+                        android:text="Navigate Safe Route"
+                        android:textAllCaps="false" android:textColor="@color/text_on_blue"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:background="@drawable/bg_button_primary" />
+                    <Button android:id="@+id/btnFlagConcern"
+                        android:layout_width="wrap_content" android:layout_height="44dp"
+                        android:text="⚑ Flag"
+                        android:textAllCaps="false" android:textColor="@color/text_on_blue"
+                        android:textSize="13sp"
+                        android:background="@drawable/bg_glass_card"
+                        android:paddingHorizontal="16dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</FrameLayout>
